@@ -4,19 +4,35 @@
 import PackageDescription
 
 let package = Package(
-    name: "ZoomTEST",
+    name: "ZoomTest",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "ZoomTEST",
-            targets: ["ZoomSDKBinaryTarget"])
+          name: "ZoomTest",
+          targets: ["ZoomTestTarget"]
+        )
     ],
     dependencies: [
     ],
     targets: [
+        .target(
+          name: "ZoomTestTarget",
+          dependencies: [
+            "ZoomTestAll",
+            "_ZoomTest",
+          ],
+          path: "Sources/ZoomTest",
+          exclude: [
+            "Resources"
+          ]
+        ),
+        .target(
+          name: "ZoomTestAll",
+          publicHeadersPath: "./"
+        ),
         .binaryTarget(
-            name: "ZoomSDKBinaryTarget",
-            url: "https://github.com/tiphainegiron/binary-package-test/releases/download/1.0.0/MobileRTC.xcframework.zip",
+            name: "_ZoomTest",
+            url: "https://github.com/tiphainegiron/binary-package-test/releases/download/3.0.0/MobileRTC.xcframework.zip",
             checksum: "935aa00c585581cbf6f309545a2ef14d170e8f7e"
         )
     ]
