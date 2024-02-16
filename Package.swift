@@ -27,7 +27,7 @@ let package = Package(
         .binaryTarget(
             name: "ZoomSDKBinaryTarget",
             url: "https://github.com/tiphainegiron/binary-package-test/releases/download/1.0.0/MobileRTC.xcframework.zip",
-            checksum: "c3aa8d5b2896ad0a3460010eadc029f483a81660e69bdd2d0ad04924f43c088a"
+            checksum: "935aa00c585581cbf6f309545a2ef14d170e8f7e"
         )
     ]
 )
