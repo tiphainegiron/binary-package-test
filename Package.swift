@@ -8,7 +8,7 @@ let package = Package(
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "ZoomSDK",
+            name: "ZoomTEST",
             targets: ["ZoomSDKBinaryTarget"])
     ],
     dependencies: [
