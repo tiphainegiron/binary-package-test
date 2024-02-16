@@ -9,21 +9,11 @@ let package = Package(
     products: [
         .library(
             name: "ZoomSDK",
-            targets: ["ZoomSDKTarget"])
+            targets: ["ZoomSDKBinaryTarget"])
     ],
     dependencies: [
     ],
     targets: [
-        .target(
-          name: "ZoomSDKTarget",
-          dependencies: [
-            "ZoomSDKBinaryTarget",
-          ],
-          path: "Sources",
-          exclude: [
-            "Resources"
-          ]
-        ),
         .binaryTarget(
             name: "ZoomSDKBinaryTarget",
             url: "https://github.com/tiphainegiron/binary-package-test/releases/download/1.0.0/MobileRTC.xcframework.zip",
